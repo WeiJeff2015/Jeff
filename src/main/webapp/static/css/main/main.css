@@ -1,0 +1,72 @@
+* {
+	font-size: 12px;
+}
+
+body {
+	background-color: #F4F9FD;
+	font: 12px/1.5 tahoma, arial, \5b8b\4f53;
+	color: #333;
+}
+
+.orange {
+	color: #F28A17;
+}
+
+.banner {
+	height: 84px;
+	margin: 0px auto;
+	background: url("../../images/banner/banner.png") no-repeat scroll 0% 0%;
+	position: relative;
+}
+
+.info .orange {
+	font-weight: bold;
+}
+
+.info {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 355px;
+	color: #333
+}
+
+.info p {
+	text-align: right;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.info .date {
+	margin-top: 8px;
+}
+
+.leftMenu{
+	padding:0px;
+	background-color: #F4F9FD;
+	width:100%
+}
+
+.leftMenu p{
+	text-indent : 40px; 
+	
+}
+
+.leftMenu hr{
+	height:2px;
+	border:none;border-top:1px solid #CCCCFF;
+	
+}
+
+.foot {
+	border-top: 1px solid #ccc;
+	padding: 5px 0;
+	text-align: center;
+	background-color: #F4F9FD;
+	height: 20px;
+	padding: 10px;
+	color: #333
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="jeff.user">
+	
+	<!-- 插入一条记录 -->
+	<insert id="sql.user.insertUser" parameterClass="com.jeff.userManager.bo.User">
+	    <![CDATA[
+		    insert into t_user(phone,login_pwd,name,age,province,city,sex,summary,status,create_date) 
+		    values(#phone#,#loginPwd#,#name#,#age#,#province#,#city#,#sex#,#summary#,#status#,now())
+	    ]]>
+	</insert>
+	
+	<!-- 修改 -->
+	<update id="sql.user.modifyUser" parameterClass="com.jeff.userManager.bo.User">
+		<![CDATA[
+			update t_user 
+		]]>
+		<dynamic prepend="set">  
+			<isNotEmpty  property="phone" prepend=",">
+				<![CDATA[
+					phone=$phone$	
+				]]>
+			</isNotEmpty>
+			
+			<isNotEmpty  property="name" prepend=",">
+				<![CDATA[
+					name=$name$	
+				]]>
+			</isNotEmpty>
+			
+			<isNotEmpty  property="age" prepend=",">
+				<![CDATA[
+					age=$age$	
+				]]>
+			</isNotEmpty>
+			<isNotEmpty  property="age" prepend=",">
+				<![CDATA[
+					province=$province$	
+				]]>
+			</isNotEmpty>
+			<isNotEmpty  property="age" prepend=",">
+				<![CDATA[
+					city=$city$	
+				]]>
+			</isNotEmpty>
+			<isNotEmpty  property="sex" prepend=",">
+				<![CDATA[
+					sex=$sex$	
+				]]>
+			</isNotEmpty>
+			<isNotEmpty  property="summary" prepend=",">
+				<![CDATA[
+					summary=$summary$	
+				]]>
+			</isNotEmpty>
+			<isNotEmpty  property="status" prepend=",">
+				<![CDATA[
+					status=$status$	
+				]]>
+			</isNotEmpty>
+		</dynamic>
+		<![CDATA[  where  1=1 ]]>
+		
+		<isNotEmpty prepend="AND" property="id">
+			<![CDATA[
+				id=$id$	
+			]]>
+		</isNotEmpty>
+	</update>
+	
+	
+</sqlMap>
